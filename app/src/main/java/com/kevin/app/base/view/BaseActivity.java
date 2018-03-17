@@ -1,4 +1,4 @@
-package com.kevin.app.base;
+package com.kevin.app.base.view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -28,6 +28,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         dialog = new MaterialDialog(this)
                 .setContentView(R.layout.dialog_loading);
         initDialogView();
+        attachView();
         initView();
     }
 
@@ -37,14 +38,27 @@ public abstract class BaseActivity extends AppCompatActivity {
         tvLoadingText = dialogView.findViewById(R.id.tv_loading_text);
     }
 
+    protected abstract void attachView();     //presenter绑定 该activity
+
     public abstract int getContentViewId();  // 获取布局id,设置布局
 
     protected abstract void initView();      // 初始化布局
 
+    @Override
+    protected void onResume() {     //界面
+        super.onResume();
+    }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
 
     @Override
     protected void onDestroy() {
+        detachView();
         super.onDestroy();
     }
+
+    protected abstract void detachView();   // presenter解除绑定 该activity
 }

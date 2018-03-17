@@ -1,11 +1,16 @@
 package com.kevin.app.view;
 
-import com.kevin.app.base.BaseActivity;
+import com.kevin.app.base.view.BaseActivity;
 
 /**
  * Created by zhoujunjie on 2018/3/14.
  */
 public class ImmersiveActivity extends BaseActivity {
+
+    @Override
+    protected void attachView() {
+        
+    }
 
     @Override
     public int getContentViewId() {
@@ -14,6 +19,11 @@ public class ImmersiveActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+
+    }
+
+    @Override
+    protected void detachView() {
 
     }
 }
