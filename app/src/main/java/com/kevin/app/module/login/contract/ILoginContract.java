@@ -1,7 +1,7 @@
 package com.kevin.app.module.login.contract;
 
 import com.kevin.app.base.presenter.BasePresenter;
-import com.kevin.app.base.view.BaseNetView;
+import com.kevin.app.base.view.BaseView;
 import com.kevin.app.module.login.model.User;
 import com.kevin.app.module.login.view.LoginActivity;
 
@@ -11,7 +11,7 @@ import com.kevin.app.module.login.view.LoginActivity;
  */
 public interface ILoginContract {
 
-    interface LoginView extends BaseNetView{
+    interface LoginView extends BaseView {
 
     }
 

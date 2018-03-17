@@ -10,7 +10,7 @@ package com.kevin.app.base.view;
  * 4. 隐藏loading框(可以在请求成功或者失败添加,不是必须的)
  * Created by zhoujunjie on 2018/3/17.
  */
-public interface BaseNetView {
+public interface BaseView {
 
     void showLoading();
 
