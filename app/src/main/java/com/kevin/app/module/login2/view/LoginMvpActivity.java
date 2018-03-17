@@ -25,8 +25,9 @@ public class LoginMvpActivity extends MvpBaseActivity<LoginMvpView,LoginMvpPrese
     EditText etUserPwd;
 
     @Override
-    protected void createPresenter() {
+    protected LoginMvpPresenter createPresenter() {
         loginPresenter = new LoginMvpPresenter(this);
+        return loginPresenter;
     }
 
     @Override

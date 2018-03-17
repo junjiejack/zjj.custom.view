@@ -24,6 +24,14 @@ public abstract class MvpBaseActivity<V extends MvpBaseView,P extends MvpBasePre
     protected TextView tvLoadingText;
     protected P presenter;
 
+    public P getPresenter() {
+        return presenter;
+    }
+
+    public void setPresenter(P presenter) {
+        this.presenter = presenter;
+    }
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +49,7 @@ public abstract class MvpBaseActivity<V extends MvpBaseView,P extends MvpBasePre
         tvLoadingText = dialogView.findViewById(R.id.tv_loading_text);
     }
 
-    protected abstract void createPresenter();     //presenter绑定 该activity
+    protected abstract P createPresenter();     //presenter绑定 该activity
 
     public abstract int getContentViewId();  // 获取布局id,设置布局
 
