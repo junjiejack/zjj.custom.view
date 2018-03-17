@@ -5,7 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.kevin.app.module.login.view.LoginActivity;
+import com.kevin.app.module.login1.view.LoginActivity;
+import com.kevin.app.module.login2.view.LoginMvpActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -19,9 +20,18 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick(R.id.btn_login)
+    @OnClick({R.id.btn_login,R.id.btn_login_mvp})
     public void onClick(View view) {
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent();
+        switch (view.getId()) {
+            case R.id.btn_login:
+                intent.setClass(this, LoginActivity.class);
+                break;
+            case R.id.btn_login_mvp:
+                intent.setClass(this, LoginMvpActivity.class);
+
+                break;
+        }
         startActivity(intent);
     }
 }

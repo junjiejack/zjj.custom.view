@@ -1,9 +1,9 @@
-package com.kevin.app.module.login.contract;
+package com.kevin.app.module.login1.contract;
 
 import com.kevin.app.base.presenter.BasePresenter;
-import com.kevin.app.base.view.BaseView;
-import com.kevin.app.module.login.model.User;
-import com.kevin.app.module.login.view.LoginActivity;
+import com.kevin.app.base.view.MvpBaseView;
+import com.kevin.app.module.login1.model.User;
+import com.kevin.app.module.login1.view.LoginActivity;
 
 /**
  * 将我们需要的presenter和view联系起来
@@ -11,7 +11,7 @@ import com.kevin.app.module.login.view.LoginActivity;
  */
 public interface ILoginContract {
 
-    interface LoginView extends BaseView {
+    interface LoginBaseView extends MvpBaseView {
 
     }
 

@@ -1,4 +1,4 @@
-package com.kevin.app.module.login.model;
+package com.kevin.app.module.login2.model;
 
 /**
  * Created by zhoujunjie on 2018/3/17.

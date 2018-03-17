@@ -1,4 +1,4 @@
-package com.kevin.app.module.login.view;
+package com.kevin.app.module.login1.view;
 
 import android.view.View;
 import android.widget.EditText;
@@ -6,15 +6,15 @@ import android.widget.Toast;
 
 import com.kevin.app.R;
 import com.kevin.app.base.activity.BaseActivity;
-import com.kevin.app.module.login.contract.ILoginContract;
-import com.kevin.app.module.login.model.User;
-import com.kevin.app.module.login.presenter.LoginPresenter;
+import com.kevin.app.module.login1.contract.ILoginContract;
+import com.kevin.app.module.login1.model.User;
+import com.kevin.app.module.login1.presenter.LoginPresenter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class LoginActivity extends BaseActivity implements ILoginContract.LoginView {
+public class LoginActivity extends BaseActivity implements ILoginContract.LoginBaseView {
 
     private LoginPresenter loginPresenter;
 

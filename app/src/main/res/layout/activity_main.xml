@@ -13,7 +13,14 @@
         android:text="Hello World!" />
 
     <Button
+        android:text="第一种mvp模式"
         android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="第二种mvp模式"
+        android:id="@+id/btn_login_mvp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

@@ -1,10 +1,10 @@
-package com.kevin.app.module.login.presenter;
+package com.kevin.app.module.login1.presenter;
 
 import android.text.TextUtils;
 
-import com.kevin.app.module.login.contract.ILoginContract;
-import com.kevin.app.module.login.model.User;
-import com.kevin.app.module.login.view.LoginActivity;
+import com.kevin.app.module.login1.contract.ILoginContract;
+import com.kevin.app.module.login1.model.User;
+import com.kevin.app.module.login1.view.LoginActivity;
 
 /**
  * Created by zhoujunjie on 2018/3/17.
