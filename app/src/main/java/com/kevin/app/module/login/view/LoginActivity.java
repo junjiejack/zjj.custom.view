@@ -5,7 +5,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.kevin.app.R;
-import com.kevin.app.base.view.BaseActivity;
+import com.kevin.app.base.activity.BaseActivity;
 import com.kevin.app.module.login.contract.ILoginContract;
 import com.kevin.app.module.login.model.User;
 import com.kevin.app.module.login.presenter.LoginPresenter;

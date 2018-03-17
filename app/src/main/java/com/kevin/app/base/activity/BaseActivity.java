@@ -1,4 +1,4 @@
-package com.kevin.app.base.view;
+package com.kevin.app.base.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
