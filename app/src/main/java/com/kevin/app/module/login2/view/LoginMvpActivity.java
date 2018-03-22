@@ -58,21 +58,22 @@ public class LoginMvpActivity extends MvpBaseActivity<LoginMvpView,LoginMvpPrese
 
     @Override
     public void showLoading() {
-
+        dialog.show();
     }
 
     @Override
     public void showDataSuccessful(Object data) {
-
+        dialog.dismiss();
     }
 
     @Override
     public void showMsg(String msg) {
+        dialog.dismiss();
         Toast.makeText(this,msg,Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void hideLoading() {
-
+        dialog.dismiss();
     }
 }
