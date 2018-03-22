@@ -5,8 +5,11 @@ package com.kevin.app.module.login2.model;
  */
 public class User {
 
-    public String name;
+    public String mobile;
+
+    public String email;
 
     public String pwd;
 
+    public String name;
 }

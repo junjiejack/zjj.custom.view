@@ -6,6 +6,7 @@ import android.widget.Toast;
 
 import com.kevin.app.R;
 import com.kevin.app.base.activity.MvpBaseActivity;
+import com.kevin.app.base.retrofit.BaseRetrofit;
 import com.kevin.app.module.login2.contract.LoginMvpView;
 import com.kevin.app.module.login2.model.User;
 import com.kevin.app.module.login2.presenter.LoginMvpPresenter;
@@ -26,7 +27,7 @@ public class LoginMvpActivity extends MvpBaseActivity<LoginMvpView,LoginMvpPrese
 
     @Override
     protected LoginMvpPresenter createPresenter() {
-        loginPresenter = new LoginMvpPresenter(this);
+        loginPresenter = new LoginMvpPresenter(this, BaseRetrofit.getApi());
         return loginPresenter;
     }
 
@@ -50,7 +51,7 @@ public class LoginMvpActivity extends MvpBaseActivity<LoginMvpView,LoginMvpPrese
     @OnClick(R.id.btn_login)
     public void onClick(View view) {
         User user = new User();
-        user.name = etUserName.getText().toString();
+        user.mobile = etUserName.getText().toString();
         user.pwd = etUserPwd.getText().toString();
         loginPresenter.login(user);
     }
