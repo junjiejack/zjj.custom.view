@@ -4,6 +4,7 @@ package com.kevin.app.api;
 import com.kevin.app.base.retrofit.BaseRetrofit;
 import com.kevin.app.model.BaseResult;
 import com.kevin.app.model.register.RegisterModel;
+import com.kevin.app.model.login.LoginModel;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -26,4 +27,7 @@ public class ApiMethods {
         ApiSubscribe(BaseRetrofit.getApi().register(registerModel),observer);
     }
 
+    public static void login(Observer<BaseResult> observer, LoginModel loginModel) {
+        ApiSubscribe(BaseRetrofit.getApi().login(loginModel),observer);
+    }
 }

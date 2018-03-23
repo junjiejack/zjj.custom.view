@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.kevin.app.module.login1.view.LoginActivity;
 import com.kevin.app.module.login2.view.LoginMvpActivity;
+import com.kevin.app.module.register.view.RegisterMvpActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_login,R.id.btn_login_mvp})
+    @OnClick({R.id.btn_login,R.id.btn_login_mvp,R.id.btn_register_mvp})
     public void onClick(View view) {
         Intent intent = new Intent();
         switch (view.getId()) {
@@ -29,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_login_mvp:
                 intent.setClass(this, LoginMvpActivity.class);
-
+                break;
+            case R.id.btn_register_mvp:
+                intent.setClass(this, RegisterMvpActivity.class);
                 break;
         }
         startActivity(intent);

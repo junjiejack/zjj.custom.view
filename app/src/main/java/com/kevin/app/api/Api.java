@@ -2,6 +2,7 @@ package com.kevin.app.api;
 
 import com.kevin.app.model.BaseResult;
 import com.kevin.app.model.register.RegisterModel;
+import com.kevin.app.model.login.LoginModel;
 
 import io.reactivex.Observable;
 import retrofit2.http.Body;
@@ -16,5 +17,8 @@ public interface Api {
     @POST("/v1/cmn/biz/channel/register")
     Observable<BaseResult> register(@Body RegisterModel registerModel);
 
+    // 登录
+    @POST("/v1/cmn/biz/channel/login")
+    Observable<BaseResult> login(@Body LoginModel loginModel);
 
 }

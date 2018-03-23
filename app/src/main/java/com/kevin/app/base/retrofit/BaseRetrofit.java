@@ -17,7 +17,7 @@ public class BaseRetrofit {
     public static Api getApi() {
         // 创建拦截器
         HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
-
+        logging.setLevel(HttpLoggingInterceptor.Level.BODY);
         // 创建okhttp
         OkHttpClient client = new OkHttpClient.Builder()
                 .addInterceptor(logging)
