@@ -5,6 +5,9 @@ import com.kevin.app.base.retrofit.BaseRetrofit;
 import com.kevin.app.model.BaseResult;
 import com.kevin.app.model.register.RegisterModel;
 import com.kevin.app.model.login.LoginModel;
+import com.kevin.app.module.profit.model.ProfitResultModel;
+
+import java.util.HashMap;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -29,5 +32,9 @@ public class ApiMethods {
 
     public static void login(Observer<BaseResult> observer, LoginModel loginModel) {
         ApiSubscribe(BaseRetrofit.getApi().login(loginModel),observer);
+    }
+
+    public static void getProfitData(Observer<ProfitResultModel> observer, HashMap<String,Integer> hashMap) {
+        ApiSubscribe(BaseRetrofit.getApi().getProfit(hashMap),observer);
     }
 }
