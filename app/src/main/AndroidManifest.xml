@@ -22,6 +22,7 @@
         <activity android:name=".module.login2.view.LoginMvpActivity"/>
         <activity android:name=".module.register.view.RegisterMvpActivity"/>
         <activity android:name=".module.profit.view.ProfitMvpActivity"/>
+        <activity android:name=".module.douban.view.DouBanMvpActivity"/>
 
         <!--android 7.0权限-->
         <provider

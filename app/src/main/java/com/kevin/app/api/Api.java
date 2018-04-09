@@ -3,6 +3,7 @@ package com.kevin.app.api;
 import com.kevin.app.model.BaseResult;
 import com.kevin.app.model.login.LoginModel;
 import com.kevin.app.model.register.RegisterModel;
+import com.kevin.app.module.douban.model.DouBanModel;
 import com.kevin.app.module.profit.model.ProfitResultModel;
 
 import java.util.HashMap;
@@ -29,5 +30,9 @@ public interface Api {
     // 获取我的战绩列表
     @GET("/v1/cmn/biz/channel/income/settled/list")
     Observable<ProfitResultModel> getProfit(@QueryMap HashMap<String,Integer> hashMap);
+
+    // 获取豆瓣top250
+    @GET("/v2/movie/top250")
+    Observable<DouBanModel.SubjectsBean> get250();
 
 }

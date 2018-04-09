@@ -23,7 +23,7 @@ public class BaseRetrofit {
         // 创建okhttp
         OkHttpClient client = new OkHttpClient.Builder()
                 .addInterceptor(logging)
-                .addInterceptor(new OAuthInterceptor())
+//                .addInterceptor(new OAuthInterceptor())
                 .build();
 
         GsonBuilder gsonBuilder = new GsonBuilder();

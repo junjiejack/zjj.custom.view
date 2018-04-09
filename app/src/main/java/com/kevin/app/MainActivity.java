@@ -11,6 +11,7 @@ import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
+import com.kevin.app.module.douban.view.DouBanMvpActivity;
 import com.kevin.app.module.login1.view.LoginActivity;
 import com.kevin.app.module.login2.view.LoginMvpActivity;
 import com.kevin.app.module.profit.view.ProfitMvpActivity;
@@ -33,21 +34,25 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn_login,R.id.btn_login_mvp,R.id.btn_register_mvp,R.id.btn_list_mvp,R.id.btn_system_share})
+    @OnClick({R.id.btn_login,R.id.btn_login_mvp,R.id.btn_register_mvp,R.id.btn_list_mvp,R.id.btn_system_share,R.id.btn_douban})
     public void onClick(View view) {
         Intent intent = new Intent();
         switch (view.getId()) {
             case R.id.btn_login:
                 intent.setClass(this, LoginActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_login_mvp:
                 intent.setClass(this, LoginMvpActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_register_mvp:
                 intent.setClass(this, RegisterMvpActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_list_mvp:
                 intent.setClass(this, ProfitMvpActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_system_share:
 //                第一种分享
@@ -61,6 +66,10 @@ public class MainActivity extends AppCompatActivity {
 //                /** 第二种分享 */
 //                shareWeixin();
 
+                break;
+            case R.id.btn_douban:
+                intent.setClass(this, DouBanMvpActivity.class);
+                startActivity(intent);
                 break;
         }
         // 跳转其它activity

@@ -5,6 +5,7 @@ import com.kevin.app.base.retrofit.BaseRetrofit;
 import com.kevin.app.model.BaseResult;
 import com.kevin.app.model.register.RegisterModel;
 import com.kevin.app.model.login.LoginModel;
+import com.kevin.app.module.douban.model.DouBanModel;
 import com.kevin.app.module.profit.model.ProfitResultModel;
 
 import java.util.HashMap;
@@ -36,5 +37,9 @@ public class ApiMethods {
 
     public static void getProfitData(Observer<ProfitResultModel> observer, HashMap<String,Integer> hashMap) {
         ApiSubscribe(BaseRetrofit.getApi().getProfit(hashMap),observer);
+    }
+
+    public static void get250(Observer<DouBanModel.SubjectsBean> observer) {
+        ApiSubscribe(BaseRetrofit.getApi().get250(),observer);
     }
 }

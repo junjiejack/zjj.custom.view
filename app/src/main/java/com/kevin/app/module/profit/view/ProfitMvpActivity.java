@@ -19,12 +19,10 @@ import butterknife.ButterKnife;
 
 public class ProfitMvpActivity extends MvpBaseActivity<ProfitMvpView,ProfitMvpPresenter> implements ProfitMvpView {
 
-        // 如何抉择  分析自己 分析当前形势
     @BindView(R.id.swipe_target)
     RecyclerView recyclerView;
 
     private int rows = 10;
-
     private int page = 1;
 
     @Override
@@ -44,7 +42,6 @@ public class ProfitMvpActivity extends MvpBaseActivity<ProfitMvpView,ProfitMvpPr
         hashMap.put("page",page);
         hashMap.put("rows",rows);
         presenter.getProfit(hashMap);
-        System.out.println("presenter is null:"+presenter);
     }
 
     @Override

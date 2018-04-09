@@ -14,11 +14,12 @@ public class BaseSettings {
 
     public static String baseHttpsUrl = BASE_RELEASE_URL;
     public static String baseShareUrl = BASE_SHARE_URL;
+    public static String baseDoubanUrl = "https://api.douban.com";
 
     static {
         try {
             if (BUILD_TYPE_QA.equals(BuildConfig.FLAVOR)) {
-                baseHttpsUrl = BASE_DEBUG_URL;
+                baseHttpsUrl = baseDoubanUrl;
                 baseShareUrl = BASE_DEBUG_URL;
             } else if (BUILD_TYPE_PD.equals(BuildConfig.FLAVOR)) {
                 baseHttpsUrl = BASE_RELEASE_URL;

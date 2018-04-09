@@ -54,7 +54,7 @@ public class RegisterMvpActivity extends MvpBaseActivity<RegisterMvpView,Registe
         ButterKnife.bind(this);
 
         DaggerAppComponent.create().inject(this);
-        Log.e(TAG,"retrofit:"+baseRetrofit.getClass()+",api:"+api.getClass());
+        Log.e(TAG,"retrofit:"+baseRetrofit.getClass()+",api:"+api);
     }
 
     @Override
