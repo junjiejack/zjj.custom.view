@@ -39,7 +39,7 @@ public abstract class MvpBaseActivity<V extends MvpBaseView,P extends MvpBasePre
         dialog = new MaterialDialog(this)
                 .setContentView(R.layout.dialog_loading);
         initDialogView();
-        createPresenter();
+        presenter = createPresenter();
         initView();
     }
 
@@ -51,7 +51,7 @@ public abstract class MvpBaseActivity<V extends MvpBaseView,P extends MvpBasePre
 
     protected abstract P createPresenter();     //presenter绑定 该activity
 
-    public abstract int getContentViewId();  // 获取布局id,设置布局
+    public abstract int getContentViewId();  // 获取a布局id,设置布局
 
     protected abstract void initView();      // 初始化布局
 

@@ -31,7 +31,7 @@ public class ProfitMvpPresenter extends MvpBasePresenter<ProfitMvpView> {
                 if (data.getErr_code() == 0) {
                     profitActivity.showDataSuccessful(data.getRows());
                 } else {
-                    profitActivity.showMsg(data.getErr_msg());
+//                    profitActivity.showMsg(data.getErr_msg());
                 }
             }
 

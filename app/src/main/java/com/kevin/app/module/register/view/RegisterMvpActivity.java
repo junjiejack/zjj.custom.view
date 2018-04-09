@@ -1,14 +1,20 @@
 package com.kevin.app.module.register.view;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.kevin.app.R;
+import com.kevin.app.api.Api;
 import com.kevin.app.base.activity.MvpBaseActivity;
+import com.kevin.app.base.dagger.DaggerAppComponent;
+import com.kevin.app.base.retrofit.BaseRetrofit;
 import com.kevin.app.module.register.contract.RegisterMvpView;
 import com.kevin.app.module.register.model.User;
 import com.kevin.app.module.register.presenter.RegisterMvpPresenter;
+
+import javax.inject.Inject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -16,7 +22,15 @@ import butterknife.OnClick;
 
 public class RegisterMvpActivity extends MvpBaseActivity<RegisterMvpView,RegisterMvpPresenter> implements RegisterMvpView {
 
-    private RegisterMvpPresenter registerPresenter;
+    public static final String TAG = RegisterMvpActivity.class.getSimpleName();
+
+    RegisterMvpPresenter registerPresenter;
+
+    @Inject
+    BaseRetrofit baseRetrofit;
+
+    @Inject
+    Api api;
 
     @BindView(R.id.et_user_name)
     EditText etUserName;
@@ -38,6 +52,9 @@ public class RegisterMvpActivity extends MvpBaseActivity<RegisterMvpView,Registe
     @Override
     protected void initView() {
         ButterKnife.bind(this);
+
+        DaggerAppComponent.create().inject(this);
+        Log.e(TAG,"retrofit:"+baseRetrofit.getClass()+",api:"+api.getClass());
     }
 
     @Override

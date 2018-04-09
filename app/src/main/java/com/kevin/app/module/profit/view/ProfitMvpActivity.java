@@ -1,22 +1,26 @@
 package com.kevin.app.module.profit.view;
 
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
 
 import com.kevin.app.R;
 import com.kevin.app.base.activity.MvpBaseActivity;
+import com.kevin.app.base.adapter.MyPremiumAdapter;
 import com.kevin.app.module.profit.contract.ProfitMvpView;
+import com.kevin.app.module.profit.model.ProfitResultModel;
 import com.kevin.app.module.profit.presenter.ProfitMvpPresenter;
 
 import java.util.HashMap;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class ProfitMvpActivity extends MvpBaseActivity<ProfitMvpView,ProfitMvpPresenter> implements ProfitMvpView {
 
-
-    @BindView(R.id.recycler_view_premium)
+        // 如何抉择  分析自己 分析当前形势
+    @BindView(R.id.swipe_target)
     RecyclerView recyclerView;
 
     private int rows = 10;
@@ -25,8 +29,7 @@ public class ProfitMvpActivity extends MvpBaseActivity<ProfitMvpView,ProfitMvpPr
 
     @Override
     protected ProfitMvpPresenter createPresenter() {
-        ProfitMvpPresenter profitPresenter = new ProfitMvpPresenter(this);
-        return profitPresenter;
+        return new ProfitMvpPresenter(this);
     }
 
     @Override
@@ -41,6 +44,7 @@ public class ProfitMvpActivity extends MvpBaseActivity<ProfitMvpView,ProfitMvpPr
         hashMap.put("page",page);
         hashMap.put("rows",rows);
         presenter.getProfit(hashMap);
+        System.out.println("presenter is null:"+presenter);
     }
 
     @Override
@@ -56,8 +60,10 @@ public class ProfitMvpActivity extends MvpBaseActivity<ProfitMvpView,ProfitMvpPr
     }
 
     @Override
-    public void showDataSuccessful(Object data) {
+    public void showDataSuccessful(List<ProfitResultModel.RowsBean> data) {
         dialog.dismiss();
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(new MyPremiumAdapter(data,this));
     }
 
     @Override

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">app</string>
     <string name="tv_loading_text">加载数据中......</string>
+    <string name="price_value_unit">%.2f</string>
 </resources>

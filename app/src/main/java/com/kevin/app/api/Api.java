@@ -1,8 +1,8 @@
 package com.kevin.app.api;
 
 import com.kevin.app.model.BaseResult;
-import com.kevin.app.model.register.RegisterModel;
 import com.kevin.app.model.login.LoginModel;
+import com.kevin.app.model.register.RegisterModel;
 import com.kevin.app.module.profit.model.ProfitResultModel;
 
 import java.util.HashMap;

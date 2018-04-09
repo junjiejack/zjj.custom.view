@@ -13,6 +13,7 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         flavorDimensions "versionCode"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -33,7 +34,7 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
@@ -44,9 +45,11 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     compile 'me.drakeet.materialdialog:library:1.3.1'
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'  // 引入retrofit网络框架
-    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'   // 添加gson解析
-//    implementation 'com.squareup.retrofit2:adapter-rxjava:2.4.0'    // 添加rxjava
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    // 引入retrofit网络框架
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    // 添加gson解析
+    //    implementation 'com.squareup.retrofit2:adapter-rxjava:2.4.0'    // 添加rxjava
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
     // 添加日志拦截器
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
@@ -58,4 +61,7 @@ dependencies {
     compile 'com.blankj:utilcode:1.7.1'
     // adapter第三方
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation project(':swipetoload')
+    compile 'com.google.dagger:dagger:2.15'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.15'
 }

@@ -10,13 +10,12 @@ public class ProfitResultModel {
 
     /**
      * err_code : 0
-     * err_msg
-     * rows : [{"year":2017,"month":11,"income":6775,"per_product":[{"product_id":2,"product_text":"聚保整车保","per_product_income":3775},{"product_id":4,"product_text":"聚保员工保","per_product_income":3000}]},{"year":2017,"month":10,"income":11109,"per_product":[{"product_id":2,"product_text":"聚保整车保","per_product_income":3759},{"product_id":4,"product_text":"聚保员工保","per_product_income":3675},{"product_id":16,"product_text":"聚保商铺保","per_product_income":3675}]}]
-     * total : 2
+     * err_msg;
+     * rows : [{"year":2017,"month":12,"income":0,"per_product":[{"product_id":1,"product_text":"聚保平台","per_product_income":0},{"product_id":1,"product_text":"聚保平台","per_product_income":0}]},{"year":2017,"month":11,"income":0,"per_product":[{"product_id":1,"product_text":"聚保平台","per_product_income":0}]},{"year":2017,"month":10,"income":0,"per_product":[{"product_id":1,"product_text":"聚保平台","per_product_income":0}]},{"year":2017,"month":9,"income":0,"per_product":[{"product_id":1,"product_text":"聚保平台","per_product_income":0}]},{"year":2017,"month":8,"income":0,"per_product":[{"product_id":1,"product_text":"聚保平台","per_product_income":0}]},{"year":2017,"month":7,"income":0,"per_product":[{"product_id":1,"product_text":"聚保平台","per_product_income":0}]},{"year":2017,"month":6,"income":0,"per_product":[{"product_id":1,"product_text":"聚保平台","per_product_income":0}]},{"year":2017,"month":5,"income":0,"per_product":[{"product_id":1,"product_text":"聚保平台","per_product_income":0}]},{"year":2017,"month":4,"income":0,"per_product":[{"product_id":1,"product_text":"聚保平台","per_product_income":0}]},{"year":2017,"month":3,"income":0,"per_product":[{"product_id":1,"product_text":"聚保平台","per_product_income":0}]}]
+     * total : 10
      */
 
     private int err_code;
-    private String err_msg;
     private int total;
     private List<RowsBean> rows;
 
@@ -26,14 +25,6 @@ public class ProfitResultModel {
 
     public void setErr_code(int err_code) {
         this.err_code = err_code;
-    }
-
-    public String getErr_msg() {
-        return err_msg;
-    }
-
-    public void setErr_msg(String err_msg) {
-        this.err_msg = err_msg;
     }
 
     public int getTotal() {
@@ -55,9 +46,9 @@ public class ProfitResultModel {
     public static class RowsBean {
         /**
          * year : 2017
-         * month : 11
-         * income : 6775
-         * per_product : [{"product_id":2,"product_text":"聚保整车保","per_product_income":3775},{"product_id":4,"product_text":"聚保员工保","per_product_income":3000}]
+         * month : 12
+         * income : 0
+         * per_product : [{"product_id":1,"product_text":"聚保平台","per_product_income":0},{"product_id":1,"product_text":"聚保平台","per_product_income":0}]
          */
 
         private int year;
@@ -99,9 +90,9 @@ public class ProfitResultModel {
 
         public static class PerProductBean {
             /**
-             * product_id : 2
-             * product_text : 聚保整车保
-             * per_product_income : 3775
+             * product_id : 1
+             * product_text : 聚保平台
+             * per_product_income : 0
              */
 
             private int product_id;

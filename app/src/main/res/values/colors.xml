@@ -5,4 +5,8 @@
     <color name="colorAccent">#FF4081</color>
     <color name="black">#000000</color>
     <color name="gray_666">#666666</color>
+    <color name="white">#ffffff</color>
+    <color name="gray_eee">#eeeeee</color>
+    <color name="blue_mine">#06c9df</color>
+    <color name="divider_color">#999999</color>
 </resources>

@@ -29,4 +29,17 @@
         android:id="@+id/btn_register_mvp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:text="列表"
+        android:id="@+id/btn_list_mvp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_system_share"
+        android:text="系统分享"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>
