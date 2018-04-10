@@ -1,51 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.kevin.app.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.kevin.app.view.NoScrollViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </com.kevin.app.view.NoScrollViewPager>
+
+    <RadioGroup
+        android:id="@+id/rb_group"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:orientation="horizontal">
 
-    <Button
-        android:text="第一种mvp模式"
-        android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/SubFragment"
+            android:drawableTop="@drawable/bg_tab_home"
+            android:text="首页" />
 
-    <Button
-        android:text="第二种mvp模式"
-        android:id="@+id/btn_login_mvp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rb_view"
+            style="@style/SubFragment"
+            android:drawableTop="@drawable/bg_tab_task"
+            android:text="控件" />
 
-    <Button
-        android:text="第二种mvp模式"
-        android:id="@+id/btn_register_mvp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rb_third"
+            style="@style/SubFragment"
+            android:drawableTop="@drawable/bg_tab_profit"
+            android:text="三方" />
 
-    <Button
-        android:text="列表"
-        android:id="@+id/btn_list_mvp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rb_other"
+            style="@style/SubFragment"
+            android:drawableTop="@drawable/bg_tab_mine"
+            android:text="其它" />
 
-    <Button
-        android:id="@+id/btn_system_share"
-        android:text="系统分享"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:id="@+id/btn_douban"
-        android:text="豆瓣"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    </RadioGroup>
 
 </LinearLayout>

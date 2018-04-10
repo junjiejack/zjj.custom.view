@@ -45,13 +45,6 @@ public class ProfitMvpActivity extends MvpBaseActivity<ProfitMvpView,ProfitMvpPr
     }
 
     @Override
-    protected void detachView() {
-        if(presenter != null) {
-            presenter.detachView();
-        }
-    }
-
-    @Override
     public void showLoading() {
         dialog.show();
     }

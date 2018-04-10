@@ -41,13 +41,6 @@ public class LoginMvpActivity extends MvpBaseActivity<LoginMvpView,LoginMvpPrese
         ButterKnife.bind(this);
     }
 
-    @Override
-    protected void detachView() {
-        if(loginPresenter != null) {
-            loginPresenter.detachView();
-        }
-    }
-
     @OnClick(R.id.btn_login)
     public void onClick(View view) {
         User user = new User();

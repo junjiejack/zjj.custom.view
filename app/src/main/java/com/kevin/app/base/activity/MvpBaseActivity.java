@@ -71,5 +71,10 @@ public abstract class MvpBaseActivity<V extends MvpBaseView,P extends MvpBasePre
         super.onDestroy();
     }
 
-    protected abstract void detachView();   // presenter解除绑定 该activity
+    protected void detachView(){
+        if (presenter != null) {
+            presenter.detachView();
+            presenter = null;
+        }
+    }  // presenter解除绑定 该activity
 }

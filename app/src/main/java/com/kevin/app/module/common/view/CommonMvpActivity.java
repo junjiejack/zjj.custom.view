@@ -31,14 +31,6 @@ public class CommonMvpActivity extends MvpBaseActivity<CommonMvpView,CommonMvpPr
     }
 
     @Override
-    protected void detachView() {
-        if(commonMvpPresenter != null) {
-            commonMvpPresenter.detachView();
-        }
-    }
-
-
-    @Override
     public void showLoading() {
         dialog.show();
     }

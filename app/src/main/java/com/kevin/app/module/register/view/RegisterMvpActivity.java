@@ -57,13 +57,6 @@ public class RegisterMvpActivity extends MvpBaseActivity<RegisterMvpView,Registe
         Log.e(TAG,"retrofit:"+baseRetrofit.getClass()+",api:"+api);
     }
 
-    @Override
-    protected void detachView() {
-        if(registerPresenter != null) {
-            registerPresenter.detachView();
-        }
-    }
-
     @OnClick(R.id.btn_login)
     public void onClick(View view) {
         User user = new User();

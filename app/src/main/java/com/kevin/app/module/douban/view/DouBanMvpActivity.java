@@ -51,14 +51,6 @@ public class DouBanMvpActivity extends MvpBaseActivity<DouBanMvpView,DouBanMvpPr
     }
 
     @Override
-    protected void detachView() {
-        if(douBanMvpPresenter != null) {
-            douBanMvpPresenter.detachView();
-        }
-    }
-
-
-    @Override
     public void showLoading() {
         dialog.show();
     }
